@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>please sign up or sign in</title>
+    <link rel="icon" href="../images/favicon.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: 
+            linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+            url('../images/image.png') no-repeat center center/cover;
+}
+
+        .container {
+            width: 400px;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 10px;
+            color: #047800;
+            font-size: 24px;
+        }
+        .underline {
+            width: 50px;
+            height: 3px;
+            background: #047800;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+        .input-box {
+            position: relative;
+            margin: 10px 0;
+        }
+        .input-box input {
+            width: 100%;
+            padding: 12px;
+            padding-left: 40px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            outline: none;
+            background: #f7f7f7;
+        }
+        .input-box i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: gray;
+        }
+        .hidden {
+            display: none;
+        }
+        .password-hint {
+            font-size: 12px;
+            margin: 10px 0;
+            color: #777;
+        }
+        .password-hint a {
+            text-decoration: none;
+            color: #047800;
+            font-weight: bold;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .buttons button {
+            flex: 1;
+            padding: 12px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn-active {
+            background: #047800;
+            color: white;
+        }
+        .btn-inactive {
+            background: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 id="formTitle">Sign In</h2>
+        <div class="underline"></div>
+
+        <form id="signUpForm" class="hidden">
+            <div class="input-box">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Name">
+            </div>
+            <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Password">
+            </div>
+            <p class="password-hint">Password Suggestions <a href="#">Click Here!</a></p>
+        </form>
+
+        <form id="signInForm">
+            <div class="input-box">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Name">
+            </div>
+            <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Password">
+            </div>
+            <p class="password-hint">Password Suggestions <a href="#">Click Here!</a></p>
+        </form>
+
+        <div class="buttons">
+            <button id="signUpBtn" class="btn-inactive" onclick="toggleForm('signUp')">Sign Up</button>
+            <button id="signInBtn" class="btn-active" onclick="toggleForm('signIn')">Sign In</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleForm(type) {
+            const signInForm = document.getElementById('signInForm');
+            const signUpForm = document.getElementById('signUpForm');
+            const signInBtn = document.getElementById('signInBtn');
+            const signUpBtn = document.getElementById('signUpBtn');
+            const formTitle = document.getElementById('formTitle');
+
+            if (type === 'signUp') {
+                signUpForm.classList.remove('hidden');
+                signInForm.classList.add('hidden');
+                formTitle.innerText = "Sign Up";
+                signUpBtn.classList.add('btn-active');
+                signUpBtn.classList.remove('btn-inactive');
+                signInBtn.classList.remove('btn-active');
+                signInBtn.classList.add('btn-inactive');
+            } else {
+                signInForm.classList.remove('hidden');
+                signUpForm.classList.add('hidden');
+                formTitle.innerText = "Sign In";
+                signInBtn.classList.add('btn-active');
+                signInBtn.classList.remove('btn-inactive');
+                signUpBtn.classList.remove('btn-active');
+                signUpBtn.classList.add('btn-inactive');
+            }
+        }
+    </script>
+
+</body>
+</html>

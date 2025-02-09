@@ -1,0 +1,279 @@
+body {
+    margin: 0px;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f5eaff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 40px;
+    
+}
+
+
+
+select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  appearance: none; /* Removes default dropdown arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo and Location */
+.logo-location {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adjust gap between dropdown and search input */
+}
+
+.logo {
+    height: 25px;
+}
+
+.location-selector {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.location-selector span {
+    margin-right: 5px;
+}
+
+.location-selector .icon {
+    height: 16px;
+}
+
+/* Search Bar */
+.search-bar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0 10px; /* Reduced margin to decrease space between search bar and icons */
+}
+
+.search-bar .icon {
+    position: absolute;
+    left: 15px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search-bar input[type="search"] {
+    width: 100%; /* Ensures search bar takes all available width */
+    padding: 10px 10px 10px 40px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+    color: #374151;
+}
+
+.search-bar input[type="search"]:focus {
+    border-color: #7a00f5;
+}
+
+.search-bar input::placeholder {
+    color: #aaa;
+}
+
+/* Actions (Login and Cart) */
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Further reduced gap to decrease space between icons */
+}
+
+.action-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.action-item:hover p {
+    color: #7a00f5;
+}
+
+.action-item i {
+    font-size: 15px;
+    color: #1c1616;
+}
+
+.action-item p {
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+}
+
+/* Hover Effects for Icons */
+.action-item:hover i {
+    color: #7a00f5;
+}
+
+section img {
+    width: 100%;       /* Makes the image fit within its container */
+    max-width: 1500px;  /* Sets a maximum width for the image */
+    height: auto;      /* Maintains the image's aspect ratio */
+    display: block;    /* Removes extra space below the image */
+    margin-top: 30px;
+     
+  }
+
+  section {
+    margin-top: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
+
+}
+
+
+main{
+ margin-left: 18px;
+ margin-top: 40px;
+}
+
+main img{
+    width:268px;
+    height: 183px;
+    padding: 20px;
+}
+
+
+  
+  /* Main Container */
+  .main3 {
+    max-width: 1200px;
+  }
+  
+ 
+  
+  /* Recipe Items */
+  .recipe-item {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .recipe-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .food {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  h4 {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 5px;
+  }
+  
+  .main4{
+    margin-left: 18px;
+    margin-top: 50px;
+   }
+
+
+   
+   .main4 .daily{
+       width:160px;
+       height: 236px;
+       padding: 30px;
+   }
+
+   
+  
+
+   footer {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 20px 0; /* Space around the footer content */
+    height: 300px;
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .foot1 {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 13px; /* Space between child elements */
+    margin-left: 50px;
+    
+  }
+  
+  .redlogo img {
+    width: 100px; /* Adjust the logo size */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .icons {
+    display: flex; /* Flexbox for social icons */
+    gap: 10px; /* Space between icons */
+  }
+  
+  .icons img {
+    width: 24px; /* Icon size */
+    height: 24px; /* Icon size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.3s; /* Smooth animation */
+  }
+  
+  .icons img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+  }
+  
+  .text {
+    font-size: 14px; /* Small text for copyright */
+    color: #6c757d; /* Muted color */
+  }
+  
+  .foot2 {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    margin-left: 30px;
+  }
+
+  .foot2 a{
+    text-decoration: none;
+    color: #6c757d; 
+    padding: 15px 0;
+    
+
+  }
+
+  .foot2 ul li{
+    list-style: none;
+    margin-bottom: 13px;
+    
+  }
+
+  .foot2 ul li a:hover{
+    color: red;
+    
+  }
