@@ -1,6 +1,8 @@
 # zepto
 Zepto Website  created using HTML and CSS. The project features a simple, clean design with a custom form, built without JavaScript. Key features include:  A fully responsive layout for different screen sizes Elegant form design with smooth styling Optimized for a user-friendly experience
 #sample homepage
+
+
 ![zepto_homepage](https://github.com/user-attachments/assets/b5a302a9-b529-4212-b6b6-191590c6559d)
 # sub page
 ![category1_page](https://github.com/user-attachments/assets/5cb454af-4d32-4b67-9665-2cb913ee693d)
